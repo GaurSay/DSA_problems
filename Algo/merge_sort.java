@@ -2,6 +2,9 @@ package Algo;
 
 public class merge_sort {
 
+	
+// Time Complexity
+//		All case = NlogN
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int arr[] = {5,4,3,2,1};

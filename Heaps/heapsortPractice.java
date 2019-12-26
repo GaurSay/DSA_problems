@@ -31,9 +31,9 @@ public class heapsortPractice {
 			
 			//create max heap on remaining array
 			heapify(arr,i,0);
-		}
-		
+		}		
 	}
+	
 
 	private static void heapify(int[] arr, int n, int i) {
 		int largest=i;

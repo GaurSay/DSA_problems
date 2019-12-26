@@ -15,6 +15,7 @@ public class DetectLoop {
         detectAndRemoveLoop(list); 
 
 	}
+	
 	public static void detectAndRemoveLoop(LL<Integer> head)
 	{
 		LL<Integer> slow=head;

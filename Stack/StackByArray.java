@@ -10,6 +10,7 @@ public class StackByArray {
         s.push(30); 
         System.out.println(s.pop() + " Popped from stack"); 
 	}
+	
 	static class Stack{
 		int arr[]=new int[50];
 		private int top;

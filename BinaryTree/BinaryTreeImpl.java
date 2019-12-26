@@ -177,7 +177,6 @@ public class BinaryTreeImpl {
 					temp.right=rnode;
 					q.add(rnode);
 				}
-							
 			}
 		}
 	}

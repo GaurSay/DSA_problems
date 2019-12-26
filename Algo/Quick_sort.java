@@ -2,6 +2,10 @@ package Algo;
 
 public class Quick_sort {
 
+	
+// Time Complexity
+//	best case = NlogN
+//	worst case= O(n^2)
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int arr[] = {5,4,3,2,1};
@@ -40,7 +44,8 @@ public class Quick_sort {
 		{
 			if(arr[i]>pivot)
 			{	
-				while(j>pivot)
+				
+				while(j>pivotpos)
 				{
 					if(arr[j]<=pivot)
 					{

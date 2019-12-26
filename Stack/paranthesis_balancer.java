@@ -9,7 +9,7 @@ public class paranthesis_balancer {
 		Stack<Character> st=new Stack<>();
 		
 		String str="{a+b}[][]()";
-		
+
 		for(int i=0;i<str.length();i++)
 		{
 			char ch=str.charAt(i);

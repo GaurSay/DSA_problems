@@ -13,6 +13,7 @@ public class HeapSort {
 	        System.out.println("Sorted array is"); 
 	        printArray(arr); 
 	}
+	
 
 	private static void printArray(int[] arr) {
 		// TODO Auto-generated method stub
@@ -25,27 +26,27 @@ public class HeapSort {
 	private void sort(int[] arr) {
 		
 		int n=arr.length;
-		for(int i=n/2;i>=0;i--)
+		for(int i=n/2-1;i>=0;i--)
 		{
 			//creates a heap
-			heapify(arr,n,i);
+			heapifyMax(arr,n,i);
 		}
 		for(int i=n-1;i>=0;i--)
 		{
 			
-			// swap first and the last node  
+			// Move current root to end
 			int temp=arr[0];
 			arr[0]=arr[i];
 			arr[i]=temp;
 			
 			
 			//create max heap on the subtree
-			heapify(arr,i,0);
+			heapifyMax(arr,i,0);
 		}
 		
 	}
 
-	private void heapify(int[] arr, int n, int i) {
+	private void heapifyMax(int[] arr, int n, int i) {
 		// TODO Auto-generated method stub
 		int largest=i;
 		int l=(i*2)+1;
@@ -64,7 +65,9 @@ public class HeapSort {
 			arr[i]=arr[largest];
 			arr[largest]=swap;
 			
-			heapify(arr, n, largest); 
+			
+			// Recursively heapify the affected sub-tree 
+			heapifyMax(arr, n, largest); 
 		}
 	}
 	static void heapifyMin(int arr[], int n, int i) 

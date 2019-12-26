@@ -20,6 +20,7 @@ public class TreeImpl {
 		root=removeLeafNodes(root);
 		printLevelWise(root);
 	}
+	
 	public static Btree<Integer> removeLeafNodes(Btree<Integer> root)
 	{
 		if(root==null)
@@ -109,11 +110,11 @@ public class TreeImpl {
 				System.out.print(temp.data+" ");
 				if(temp.left!=null)
 				{
-					q.add(temp.left);
+					sec.add(temp.left);
 				}
 				if(temp.right!=null)
 				{
-					q.add(temp.right);
+					sec.add(temp.right);
 				}
 				if(q.isEmpty())
 				{

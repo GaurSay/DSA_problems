@@ -8,32 +8,44 @@ public class reverseLL {
 		//// TODO Auto-generated method stub
 		LL<Integer> head=input();
 		Scanner s=new Scanner(System.in);
-		head=reverse_Iterative(head);
-		printNfromLast(head,3);
+		//head=reverse_Iterative(head);
+		printNfromLast(head,2);
 		while(head!=null)
 		{
 			System.out.print(head.data+" ");
 			head=head.next;
 		}
-
 	}
+	
 	public static void printNfromLast(LL<Integer> node,int n)
 	{
-		LL<Integer> slow=node;
-		LL<Integer> fast=node;
-		while(fast.next!=null && fast.next.next!=null)
+		LL<Integer> temp=node;
+		int t=n;
+		while(n>0)
 		{
-			fast=fast.next.next;
-			slow=slow.next;
+			if(temp==null)
+			{
+				System.out.println("this index does not exist from end node !!");
+				return;
+			}
+			temp=temp.next;
+			n--;
 		}
-		LL<Integer> temp=slow;
-		//System.out.println(temp.data);
-		while(temp.next!=null)
+		System.out.println(temp.data);
+		while(temp!=null)
 		{
 			temp=temp.next;
 			node=node.next;
 		}
-		System.out.println(node.data);
+		System.out.println(node.data+" is the "+t+"th element from the end!!");
+		
+		
+//		while(temp.next!=null)
+//		{
+//			temp=temp.next;
+//			node=node.next;
+//		}
+//		System.out.println(node.data);
 		
 	}
 	
@@ -46,8 +58,7 @@ public class reverseLL {
 			LL<Integer> temp=curr.next;
 			curr.next=prev;
 			prev=curr;
-			curr=temp;
-			
+			curr=temp;			
 		}
 		head.next=null;
 		return prev;
@@ -100,8 +111,7 @@ public class reverseLL {
 				LL<Integer> temp=head;
 				while(temp.next!=null)
 				{
-					temp=temp.next;
-					
+					temp=temp.next;				
 				}
 				temp.next=newnode;
 			}			

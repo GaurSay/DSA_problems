@@ -4,7 +4,7 @@ public class findDup {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[]= {0,4,2,5,4,7,1,3,6};
+		int arr[]= {0,4,2,5,7,7,1,3,6};
 		find(arr);
 		
 
